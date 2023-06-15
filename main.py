@@ -28,7 +28,7 @@ inst_velocity = 0
 for i in range(0, len(df['vel'].index)-1):
     inst_velocity += diff_velocity[i]
     df.at[i, 'vel'] = inst_velocity
-    
+
 print(df)
 df = df['vel']
 fig = df.plot(title="Pandas Backend Example", template="simple_white",
