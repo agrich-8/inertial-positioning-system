@@ -52,14 +52,11 @@ fig.update_layout(
         width=1000, 
         height=800,
         legend_orientation='h',
-        #   margin=dict(l=0, r=0, t=40, b=0),
         legend=dict(x=.5, xanchor='center'),
         scene=go.layout.Scene(
                 xaxis=go.layout.scene.XAxis(title='AngleX(°)'),
                 yaxis=go.layout.scene.YAxis(title='AngleY(°)'),
-                zaxis=go.layout.scene.ZAxis(title='AngleZ(°)'),
-                # set default "camera" view
-                # camera=dict(eye=dict(x=1.4, y=1.5, z=0.3))
+                zaxis=go.layout.scene.ZAxis(title='AngleZ(°)')
                 ))
     
 fig.show()

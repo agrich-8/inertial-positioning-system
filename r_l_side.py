@@ -18,7 +18,6 @@ fig.add_trace(
             mode='markers',
             marker=dict(size=3, color='#03fca5', line=dict(color='MediumPurple', width=1))))
 
-
 fig.add_trace(
         go.Scatter3d(
             name='left side',
@@ -27,7 +26,6 @@ fig.add_trace(
             z=df_l_side['AccZ(g)'], 
             mode='markers', 
             marker=dict(size=3, color='#3443eb', line=dict(color='MediumPurple', width=1))))
-
 
 fig.update_layout(
         title='Сomparison of 1, 2, 3, 4 sectors acceleration graphs',

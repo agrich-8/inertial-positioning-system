@@ -1,5 +1,7 @@
 from datetime import datetime
 import pandas as pd
+from functools import reduce
+
 pd.options.plotting.backend = "plotly"
 # pd.options.display.max_columns = 100
 
@@ -42,8 +44,6 @@ for i in range(0, len(df['dis'].index)-1):
     inst_distance += diff_distance[i]
     df.at[i, 'dis'] = inst_distance
 
-# print(abs(df['dis']))
-from functools import reduce
 lst_avg = reduce(lambda x, y: x + y, diff_distance) / len(diff_distance)
 print(lst_avg)
 df = df['dis']
