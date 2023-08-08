@@ -1,12 +1,9 @@
-import plotly
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-import numpy as np
 from datetime import datetime
 import pandas as pd
 pd.options.plotting.backend = "plotly"
 # pd.options.display.max_columns = 100
-df = pd.read_csv("data/dormant_state_20Hz.txt", sep="\t")    #read text data into pandas DataFrame
+
+df = pd.read_csv("data/dormant_state_20Hz.txt", sep="\t")
 df['vel'] = ''
 
 
@@ -15,7 +12,6 @@ def vel(t1,t2,a):
     t1 = datetime.strptime(t1, dateFormatter)
     t2 = datetime.strptime(t2, dateFormatter)
     delta = t2-t1
-    # diff_velocity = delta.microseconds / 100000 * a
     diff_velocity = 0.01 * (a) * 9.8 + 0.0009
     return diff_velocity
     
